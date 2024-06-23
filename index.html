@@ -1,723 +1,1149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Klinik Iris - Your family's health, our priority">
-    <meta name="author" content="">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="description"
+      content="Klinik Iris - Your family's health, our priority" />
+    <meta name="author" content="" />
     <title>Klinik Iris | Klinik Keluarga Anda</title>
-    
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="img/circle.png">
-    
-    <!-- Bootstrap Icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
-    
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet">
-    <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
 
-    
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="img/circle.png" />
+
+    <!-- Bootstrap Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet" />
+
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+      rel="stylesheet"
+      type="text/css" />
+
     <!-- SimpleLightbox plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet">
-    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
+      rel="stylesheet" />
+
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link href="css/mdb.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet" />
 
     <style>
-        .nav-link {
-            color: rgb(10, 10, 56) !important;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: gold !important;
-        }
+      .nav-link {
+        color: rgb(10, 10, 56) !important;
+        transition: color 0.3s;
+      }
+      .nav-link:hover {
+        color: gold !important;
+      }
+      header.masthead {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out,
+          padding-bottom 0.3s ease-in-out;
+      }
+      header.masthead::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("assets/h2.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.8;
+        z-index: 1;
+      }
+
+      /* Banner text styling */
+      .banner-text {
+        position: relative;
+        margin-top: 55px;
+        z-index: 2;
+        color: white;
+        font-size: 3rem;
+        font-family: "Merriweather", serif;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        text-align: center;
+        animation: fadeInUp 2s ease-in-out;
+      }
+      .working-hours {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        font-family: "Merriweather Sans", sans-serif;
+        animation: fadeInUp 2s ease-in-out 0.5s;
+        animation-fill-mode: both;
+      }
+      p,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #0a0a38; /* Navy blue color for text */
+      }
+      @media (max-width: 768px) {
         header.masthead {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            height: 700px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            transition: height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+          height: auto;
+          padding-top: 3rem;
+          padding-bottom: 3rem;
         }
-        header.masthead::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('assets/h2.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.8;
-            z-index: 1;
+        header.masthead h1 {
+          font-size: 2rem;
         }
-
-        /* Banner text styling */
         .banner-text {
-            position: relative;
-            margin-top: 55px;
-            z-index: 2;
-            color: white;
-            font-size: 3rem;
-            font-family: 'Merriweather', serif;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            text-align: center;
-            animation: fadeInUp 2s ease-in-out;
+          font-size: 1.5rem;
         }
-        .working-hours {
-            font-size: 1.5rem;
-            margin-top: 10px;
-            font-family: 'Merriweather Sans', sans-serif;
-            animation: fadeInUp 2s ease-in-out 0.5s;
-            animation-fill-mode: both;
+        .navbar-brand img {
+          width: 50px;
         }
-        p, h2, h3, h4, h5, h6 {
-            color: #0a0a38; /* Navy blue color for text */
-        }
-        @media (max-width: 768px) {
-            header.masthead {
-                height: auto;
-                padding-top: 3rem;
-                padding-bottom: 3rem;
-            }
-            header.masthead h1 {
-                font-size: 2rem;
-            }
-            .banner-text {
-                font-size: 1.5rem;
-            }
-            .navbar-brand img {
-                width: 50px;
-            }
-        }
-        .navy-background {
-            background-color: rgb(6, 11, 49);
-            color: white;
-            padding: 20px;
-        }
-        #contact h2 {
-            color: #0a0a38;
-        }
-        .contact-info {
-            color: #0a0a38;
-            border-radius: 5px;
-        }
-        #reviews .carousel-item {
-            text-align: center;
-            padding: 30px;
-        }
-        #reviews .stars {
-            color: #ffc107;
-        }
-        #reviews .carousel-control-prev-icon,
-        #reviews .carousel-control-next-icon {
-            background-color: #000;
-            border-radius: 50%;
-            padding: 10px;
-        }
-        .note-background {
-            background-color: #ffc107;
-        }
-        .gold-text {
-            color: #ffc107;
-        }
+      }
+      .navy-background {
+        background-color: rgb(6, 11, 49);
+        color: white;
+        padding: 20px;
+      }
+      #contact h2 {
+        color: #0a0a38;
+      }
+      .contact-info {
+        color: #0a0a38;
+        border-radius: 5px;
+      }
+      #reviews .carousel-item {
+        text-align: center;
+        padding: 30px;
+      }
+      #reviews .stars {
+        color: #ffc107;
+      }
+      #reviews .carousel-control-prev-icon,
+      #reviews .carousel-control-next-icon {
+        background-color: #000;
+        border-radius: 50%;
+        padding: 10px;
+      }
+      .note-background {
+        background-color: #ffc107;
+      }
+      .gold-text {
+        color: #ffc107;
+      }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            0% { transform: translateY(20px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+      /* Animations */
+      @keyframes fadeInUp {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
         }
-
-        /* Header scroll effect */
-        .shrink {
-            height: 200px !important;
-            padding-top: 10px !important;
-            padding-bottom: 10px !important;
+        100% {
+          transform: translateY(0);
+          opacity: 1;
         }
+      }
 
-            @keyframes fadeIn {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-            .page-section {
-                animation: fadeIn 1.5s ease-in;
-            }
-            .text-center {
-                text-align: center;
-            }
-            .btn-gold {
-                background-color: #ffc107;
-                color: rgb(10, 10, 56);
-                width: 100%;
-                max-width: 300px;
-                border: none;
-            }
-            .btn-gold:hover {
-                background-color: #ffc107;
-                color: rgb(10, 10, 56);
-            }
-            /* Add these styles to your CSS */
-#vision-mission {
-    opacity: 0; /* Initially hide the section */
-    transform: translateY(20px); /* Apply a slight translation */
-    transition: opacity 1s ease, transform 1s ease;
-}
+      /* Header scroll effect */
+      .shrink {
+        height: 200px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
 
-#vision-mission.visible {
-    opacity: 1; /* Fade in the section */
-    transform: translateY(0); /* Reset translation */
-}
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .page-section {
+        animation: fadeIn 1.5s ease-in;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .btn-gold {
+        background-color: #ffc107;
+        color: rgb(10, 10, 56);
+        width: 100%;
+        max-width: 300px;
+        border: none;
+      }
+      .btn-gold:hover {
+        background-color: #ffc107;
+        color: rgb(10, 10, 56);
+      }
+      /* Add these styles to your CSS */
+      #vision-mission {
+        opacity: 0; /* Initially hide the section */
+        transform: translateY(20px); /* Apply a slight translation */
+        transition: opacity 1s ease, transform 1s ease;
+      }
 
-
+      #vision-mission.visible {
+        opacity: 1; /* Fade in the section */
+        transform: translateY(0); /* Reset translation */
+      }
     </style>
-
-</head>
-<body id="page-top">
+  </head>
+  <body id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="index.html">
-                <img height="" width="70" src="./assets/hey.png" alt="Klinik Iris Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto my-2 my-lg-0 justify-content-between w-10">
-                    <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about-us">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">PACKAGES</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/panels.html">PANELS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/gallery.html">GALLERY</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://wa.me/01161629602" target="_blank">WHATSAPP US</a></li>
-                    <li class="nav-item">
-                        <div style="background-color: green; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-                            <i class="bi bi-whatsapp" style="color: white;"></i>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img
+            height=""
+            width="70"
+            src="./assets/hey.png"
+            alt="Klinik Iris Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul
+            class="navbar-nav ms-auto my-2 my-lg-0 justify-content-between w-10">
+            <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-us">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">PACKAGES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/panels.html">PANELS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://wa.me/01161629602"
+                target="_blank"
+                >WHATSAPP US</a
+              >
+            </li>
+            <li class="nav-item">
+              <div
+                style="
+                  background-color: green;
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                ">
+                <i class="bi bi-whatsapp" style="color: white"></i>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <header class="masthead">
-        <div id="carouselExampleIndicators" class="banner-container"></div>
-        <div class="banner-text">Selamat Datang ke Klinik Iris<br>Klinik Keluarga Anda
-            <div class="working-hours">Monday - Friday, Sunday: 9am to 11pm<br>Sunday: 9am to 7pm</div>
+      <div id="carouselExampleIndicators" class="banner-container"></div>
+      <div class="banner-text">
+        Selamat Datang ke Klinik Iris<br />Klinik Keluarga Anda
+        <div class="working-hours">
+          Monday - Friday, Sunday: 9am to 11pm<br />Sunday: 9am to 7pm
         </div>
+      </div>
     </header>
 
     <script>
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('header.masthead');
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > 500) {
-                header.classList.add('shrink');
-            } else {
-                header.classList.remove('shrink');
-            }
-        });
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header.masthead");
+        var scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > 500) {
+          header.classList.add("shrink");
+        } else {
+          header.classList.remove("shrink");
+        }
+      });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var buttons = document.querySelectorAll('.btn-gold');
-            buttons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    var target = document.querySelector(this.getAttribute('data-bs-target'));
-                    var isOpen = target.classList.contains('show');
+      document.addEventListener("DOMContentLoaded", function () {
+        var buttons = document.querySelectorAll(".btn-gold");
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            var target = document.querySelector(
+              this.getAttribute("data-bs-target")
+            );
+            var isOpen = target.classList.contains("show");
 
-                    // Hide all open collapses
-                    var openCollapses = document.querySelectorAll('.collapse.show');
-                    openCollapses.forEach(function(openCollapse) {
-                        openCollapse.classList.remove('show');
-                    });
-
-                    // Toggle the target collapse
-                    if (!isOpen) {
-                        target.classList.add('show');
-                    }
-                });
+            // Hide all open collapses
+            var openCollapses = document.querySelectorAll(".collapse.show");
+            openCollapses.forEach(function (openCollapse) {
+              openCollapse.classList.remove("show");
             });
+
+            // Toggle the target collapse
+            if (!isOpen) {
+              target.classList.add("show");
+            }
+          });
         });
+      });
     </script>
 
     <!-- Main Content Sections -->
     <!-- Vision and Mission Section START-->
-<section class="page-section bg-white text-black mt-2" id="vision-mission">
-    <div class="container">
+    <section class="page-section bg-white text-black mt-2" id="vision-mission">
+      <div class="container">
         <div class="row">
-            <div class="col-lg-12 has-box-shadow mb-4">
-                <div class="container px-4 px-lg-5 text-center pt-4">
-                    <hr class="hr">
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <i class="bi bi-eye gold-text" style="font-size: 3rem;"></i>
-                            <h2 class="mb-4 p-3 f-w-700">Vision</h2>
-                            <p>Klinik Iris is committed to being a premier and competitive family health clinic.</p>
-                        </div>
-                        <div class="col-lg-6">
-                            <i class="bi bi-bullseye gold-text" style="font-size: 3rem;"></i>
-                            <h2 class="mb-4 p-3 f-w-700">Mission</h2>
-                            <p>Klinik Iris is committed to providing quality, competent, friendly primary health services that meet customer needs in helping achieve excellent community health through advanced, up-to-date, and cost-effective medical treatment.</p>
-                        </div>
-                    </div>
+          <div class="col-lg-12 has-box-shadow mb-4">
+            <div class="container px-4 px-lg-5 text-center pt-4">
+              <hr class="hr" />
+              <br />
+              <div class="row">
+                <div class="col-lg-6">
+                  <i class="bi bi-eye gold-text" style="font-size: 3rem"></i>
+                  <h2 class="mb-4 p-3 f-w-700">Vision</h2>
+                  <p>
+                    Klinik Iris is committed to being a premier and competitive
+                    family health clinic.
+                  </p>
                 </div>
+                <div class="col-lg-6">
+                  <i
+                    class="bi bi-bullseye gold-text"
+                    style="font-size: 3rem"></i>
+                  <h2 class="mb-4 p-3 f-w-700">Mission</h2>
+                  <p>
+                    Klinik Iris is committed to providing quality, competent,
+                    friendly primary health services that meet customer needs in
+                    helping achieve excellent community health through advanced,
+                    up-to-date, and cost-effective medical treatment.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-<!-- Vision and Mission Section END-->
-
+      </div>
+    </section>
+    <!-- Vision and Mission Section END-->
 
     <!-- About Section START -->
     <section class="page-section bg-light text-dark" id="about-us">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img class="img-fluid shadow-sm rounded mb-4 mb-lg-0" src="./assets/doctors.png" alt="Doctors">
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="h3 text-center" style="color: rgb(10, 10, 56);">Resident Doctors</h3>
-                    <p class="text-center" style="color: rgb(10, 10, 56);">Dr. Arisman and Dr. Alya are esteemed medical professionals renowned for their extensive expertise in healthcare. They have a distinguished history of working in both the government and private sectors, showcasing their adaptability and comprehensive understanding of diverse healthcare environments. With a wealth of experience spanning numerous years, they have consistently demonstrated exceptional skill and proficiency in their practice.</p>
-                    
-                    <div class="text-center">
-                        <button class="btn btn-gold mb-3" data-bs-toggle="collapse" data-bs-target="#doctorArisman" aria-expanded="false" aria-controls="doctorArisman">Dr. Arisman</button>
-                        <div class="collapse" id="doctorArisman">
-                            <ul class="list-unstyled" style="color: rgb(10, 10, 56);">
-                                <li><strong>Alma Mater:</strong> Universitas Hassanuddin, Indonesia</li>
-                                <li><strong>Previous Hospital:</strong> Tengku Ampuan Rahimah Hospital <br> Queen Elizabeth Hospital, Kota Kinabalu</li>
-                                <li><strong>Clinic Hours:</strong></li>
-                                <li>Monday (9am - 11pm)</li>
-                                <li>Wednesday (9am - 11pm)</li>
-                                <li>Friday (9am-1pm, 2pm-11pm)</li>
-                                <li>Saturday (9am - 7pm)</li>
-                            </ul>
-                        </div>
-                        
-                        <button class="btn btn-gold mb-3" data-bs-toggle="collapse" data-bs-target="#doctorAlya" aria-expanded="false" aria-controls="doctorAlya">Dr. Alya</button>
-                        <div class="collapse" id="doctorAlya">
-                            <ul class="list-unstyled" style="color: rgb(10, 10, 56);">
-                                <li><strong>Alma Mater:</strong> Universitas Hassanuddin, Indonesia</li>
-                                <li><strong>Previous Hospital:</strong> Kuala Lumpur General Hospital<br>Hospital Shah Alam </li>
-                                <li><strong>Clinic Hours:</strong></li>
-                                <li>Tuesday (9am - 11pm)</li>
-                                <li>Thursday (9am - 11pm)</li>
-                                <li>Sunday (9am - 11pm)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid shadow-sm rounded mb-4 mb-lg-0"
+              src="./assets/doctors.png"
+              alt="Doctors" />
+          </div>
+          <div class="col-lg-6">
+            <h3 class="h3 text-center" style="color: rgb(10, 10, 56)">
+              Resident Doctors
+            </h3>
+            <p class="text-center" style="color: rgb(10, 10, 56)">
+              Dr. Arisman and Dr. Alya are esteemed medical professionals
+              renowned for their extensive expertise in healthcare. They have a
+              distinguished history of working in both the government and
+              private sectors, showcasing their adaptability and comprehensive
+              understanding of diverse healthcare environments. With a wealth of
+              experience spanning numerous years, they have consistently
+              demonstrated exceptional skill and proficiency in their practice.
+            </p>
+
+            <div class="text-center">
+              <button
+                class="btn btn-gold mb-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#doctorArisman"
+                aria-expanded="false"
+                aria-controls="doctorArisman">
+                Dr. Arisman
+              </button>
+              <div class="collapse" id="doctorArisman">
+                <ul class="list-unstyled" style="color: rgb(10, 10, 56)">
+                  <li>
+                    <strong>Alma Mater:</strong> Universitas Hassanuddin,
+                    Indonesia
+                  </li>
+                  <li>
+                    <strong>Previous Hospital:</strong> Tengku Ampuan Rahimah
+                    Hospital <br />
+                    Queen Elizabeth Hospital, Kota Kinabalu
+                  </li>
+                  <li><strong>Clinic Hours:</strong></li>
+                  <li>Monday (9am - 11pm)</li>
+                  <li>Wednesday (9am - 11pm)</li>
+                  <li>Friday (9am-1pm, 2pm-11pm)</li>
+                  <li>Saturday (9am - 7pm)</li>
+                </ul>
+              </div>
+
+              <button
+                class="btn btn-gold mb-3"
+                data-bs-toggle="collapse"
+                data-bs-target="#doctorAlya"
+                aria-expanded="false"
+                aria-controls="doctorAlya">
+                Dr. Alya
+              </button>
+              <div class="collapse" id="doctorAlya">
+                <ul class="list-unstyled" style="color: rgb(10, 10, 56)">
+                  <li>
+                    <strong>Alma Mater:</strong> Universitas Hassanuddin,
+                    Indonesia
+                  </li>
+                  <li>
+                    <strong>Previous Hospital:</strong> Kuala Lumpur General
+                    Hospital<br />Hospital Shah Alam
+                  </li>
+                  <li><strong>Clinic Hours:</strong></li>
+                  <li>Tuesday (9am - 11pm)</li>
+                  <li>Thursday (9am - 11pm)</li>
+                  <li>Sunday (9am - 11pm)</li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- About Section END -->
-    
-        <!-- Carousel Section START-->
-        <div class="container-fluid p-0 mt-5">
-        	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        	  <div class="carousel-indicators">
-        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        	  </div>
-        	  <div class="carousel-inner">
-        	    <div class="carousel-item active">
-        	      <img src="./assets/h1.jpg" class="d-block w-100 slider-img-size" alt="...">
-        	    </div>
-        	    <div class="carousel-item">
-        	      <img src="./assets/h2.jpg" class="d-block w-100 slider-img-size" alt="...">
-        	    </div>
-        	    <div class="carousel-item">
-        	      <img src="./assets/h3.jpg" class="d-block w-100 slider-img-size" alt="...">
-        	    </div>
-        	    <div class="carousel-item">
-        	      <img src="./assets/counter.jpeg" class="d-block w-100 slider-img-size" alt="...">
-        	    </div>
-        	  </div>
-        	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        	    <span class="visually-hidden">Previous</span>
-        	  </button>
-        	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        	    <span class="visually-hidden">Next</span>
-        	  </button>
-        	</div>
-        </div>
 
-      
-        <!-- Carousel Section END-->
-        <!-- Image Section START -->
-        <div id="portfolio">
-            <div class="container-fluid p-0 mt-5">
-            	<div class="row g-0">
-                <section class="page-section bg-navy text-white" id="services"></section>
-                <div class="container"></div>
-                <div class="col-lg-12 text-center"></div>
-                <center><h2 class="mb-4 p-3 f-w-700">List of services available</h2></center>
-    <section class="page-section bg-white text-black text-center mt-2">
-        <div class="container">
-            <div class="row justify-content-center">
+    <!-- Carousel Section START-->
+    <div class="container-fluid p-0 mt-5">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/h1.jpg"
+              class="d-block w-100 slider-img-size"
+              alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/h2.jpg"
+              class="d-block w-100 slider-img-size"
+              alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/h3.jpg"
+              class="d-block w-100 slider-img-size"
+              alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/counter.jpeg"
+              class="d-block w-100 slider-img-size"
+              alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel Section END-->
+    <!-- Image Section START -->
+    <div id="portfolio">
+      <div class="container-fluid p-0 mt-5">
+        <div class="row g-0">
+          <section
+            class="page-section bg-navy text-white"
+            id="services"></section>
+          <div class="container"></div>
+          <div class="col-lg-12 text-center"></div>
+          <center>
+            <h2 class="mb-4 p-3 f-w-700">List of services available</h2>
+          </center>
+          <section class="page-section bg-white text-black text-center mt-2">
+            <div class="container">
+              <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <img class="img-fluid shadow-sm rounded mb-4" src="./assets/servicess.png" alt="New Image">
+                  <img
+                    class="img-fluid shadow-sm rounded mb-4"
+                    src="./assets/servicess.png"
+                    alt="New Image" />
                 </div>
-    </section>
-    <!-- Image Section END -->
+              </div>
+            </div>
+          </section>
+          <!-- Image Section END -->
 
-        <!-- Portfolio Section START-->
-        <div id="portfolio">
+          <!-- Portfolio Section START-->
+          <div id="portfolio">
             <div class="container-fluid p-0 mt-5">
-            	<div class="row g-0">
-                <section class="page-section bg-navy text-white" id="services"></section>
+              <div class="row g-0">
+                <section
+                  class="page-section bg-navy text-white"
+                  id="services"></section>
                 <div class="container"></div>
                 <div class="col-lg-12 text-center"></div>
-                <center><h2 class="mb-4 p-3 f-w-700">Health Screening Packages</h2></center>
-                    <div class="col-lg-4 col-sm-12 p-2">
-                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                          <img src="./assets/s1.jpg" class="w-100" />
-                          <a href="pages/page1.html">
-                            <div class="mask d-flex align-items-center justify-content-center" style="background-color: rgba(57, 192, 237, 0.2)">
-                            	<h1 class="navy-background gold-text p-3">Read more</h1>
-                            </div>
-                          </a>
+                <center>
+                  <h2 class="mb-4 p-3 f-w-700">Health Screening Packages</h2>
+                </center>
+                <div class="col-lg-4 col-sm-12 p-2">
+                  <div
+                    class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                    <img src="./assets/s1.jpg" class="w-100" />
+                    <a href="pages/page1.html">
+                      <div
+                        class="mask d-flex align-items-center justify-content-center"
+                        style="background-color: rgba(57, 192, 237, 0.2)">
+                        <h1 class="navy-background gold-text p-3">Read more</h1>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 p-2">
+                  <div
+                    class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                    <img src="./assets/s2.jpg" class="w-100" />
+                    <a href="page2.html">
+                      <div
+                        class="mask d-flex align-items-center justify-content-center"
+                        style="background-color: rgba(57, 192, 237, 0.2)">
+                        <h1 class="navy-background gold-text p-3">Read more</h1>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-12 p-2">
+                  <div
+                    class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                    <img src="./assets/s3.jpg" class="w-100" />
+                    <a href="pages/page3.html">
+                      <div
+                        class="mask d-flex align-items-center justify-content-center"
+                        style="background-color: rgba(57, 192, 237, 0.2)">
+                        <h1 class="navy-background gold-text p-3">Read more</h1>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 col-sm-10 p-4 notice-responsive">
+                  <div class="alert alert-info note-background" role="alert">
+                    <center>
+                      <h4>
+                        <strong class="text-success">Note:</strong> Patients are
+                        welcome to Walk-in and we do accept Doctors House Call
+                        service.
+                      </h4>
+                    </center>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Google Reviews Section START-->
+              <section
+                class="page-section bg-light text-dark mt-5"
+                id="reviews">
+                <div class="container">
+                  <div class="text-center">
+                    <h2 class="mb-4">What our patients say about us!</h2>
+                  </div>
+                  <div
+                    id="reviewsCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/farizah.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 1"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            Farizah Ismail
+                            <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on May, 2023)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "Highly recommended. Doctors and staff are good and
+                            very friendly. The clinic is clean, comfortable and
+                            beautiful. Affordable. The best and most
+                            satisfactory service regardless of age is served &
+                            the best service is satisfied. 👍🏻👍🏻👍🏻👍🏻👍🏻 don't
+                            regret choosing iris clinic. Thanks doctor &
+                            staff.."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 p-2">
-                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                          <img src="./assets/s2.jpg" class="w-100" />
-                          <a href="page2.html">
-                            <div class="mask d-flex align-items-center justify-content-center" style="background-color: rgba(57, 192, 237, 0.2)">
-                            	<h1 class="navy-background gold-text p-3">Read more</h1>
-                            </div>
-                          </a>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/arif.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 2"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            Mohd Arif
+                            <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on April, 2024)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "One of the best clinics in Shah Alam. The doctor is
+                            very friendly and very understanding of the
+                            patient's condition. Indeed, since the beginning,
+                            this clinic has been my family's choice. The service
+                            provided is very good and the price is very
+                            reasonable. Thank you Dr. Arisman and Dr. Alya ."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 p-2">
-                        <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                          <img src="./assets/s3.jpg" class="w-100" />
-                          <a href="pages/page3.html">
-                            <div class="mask d-flex align-items-center justify-content-center" style="background-color: rgba(57, 192, 237, 0.2)">
-                            	<h1 class="navy-background gold-text p-3">Read more</h1>
-                            </div>
-                          </a>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/fathihah.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 3"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            Nur Fathihah
+                            <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on April, 2024)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "Everything went well. Dr Alia gave a good and
+                            details explanation and staff also provided a good
+                            service. Will come again 👍🏼."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
                         </div>
-                    </div>
-                    
-                    <div class="col-lg-12 col-sm-10 p-4 notice-responsive">
-                      <div class="alert alert-info note-background" role="alert">
-                          <center><h4><strong class="text-success">Note:</strong> Patients are welcome to Walk-in and we do accept Doctors House Call service.</h4></center>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/ryan.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 4"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            Ryan <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on January, 2024)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "I had a fantastic experience at Klinik Iris during
+                            my first visit for Influenza. Dr. Alya was thorough,
+                            explaining everything without pressure, and
+                            respecting my consent. The clinic is clean,
+                            aesthetically pleasing, and the friendly clinic
+                            assistant added to the positive atmosphere.
+                            Affordable pricing makes it a top recommendation for
+                            anyone seeking quality care. I wholeheartedly
+                            recommend Klinik Iris to everyone seeking a
+                            remarkable healthcare experience.."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/luqman.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 5"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            LUQMANUL HAKIM
+                            <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on January, 2024)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "The receptionist is very welcoming and thanks to Dr
+                            Arisman for helping me with my problem. A great
+                            experience and well deserved 5 star!."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/atiqah.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 6"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            Atiqah Wahab
+                            <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on May, 2023)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "Beautiful clinic. Dr Aris is one of the nicest and
+                            most knowledgeable doctors we have ever met. He
+                            gives very detailed explanations of the illnesses we
+                            have and the treatment we need. The receptionist and
+                            staff are also calming and professional. Price is
+                            very reasonable too."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                          <img
+                            src="./assets/shahrizan.png"
+                            class="rounded-circle mb-3"
+                            alt="Reviewer 7"
+                            style="width: 80px; height: 80px" />
+                          <h5>
+                            Shahrizan Adzham Ahmad
+                            <i class="fab fa-google text-danger ms-2"></i
+                            ><span class="text-muted ms-2"
+                              >(Posted on May, 2023)</span
+                            >
+                          </h5>
+                          <p class="text-muted">
+                            "My experience at Klinik Iris was excellent.
+                            Everything was five star, from the receptionists to
+                            the doctor himself. After learning I had diabetes
+                            from my insurance's medical check-up, I at first
+                            felt worried. I therefore visited Klinik Iris for
+                            treatment and guidance. I appreciated how carefully
+                            Dr. Arisman reviewed the results of the diagnostic
+                            and thoroughly and openly explained everything. I am
+                            immediately aware of my situation and what needs to
+                            be done next. Thanks to his exceptional care,
+                            curiosity, investigative mind and ability to
+                            connect. He paired his knowledge with an openness to
+                            listen and discuss. Without a doubt, I'd recommend
+                            Klinik Iris."
+                          </p>
+                          <div class="stars mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  
-				</div>
+                    <button
+                      class="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#reviewsCarousel"
+                      data-bs-slide="prev">
+                      <span
+                        class="carousel-control-prev-icon"
+                        aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      class="carousel-control-next"
+                      type="button"
+                      data-bs-target="#reviewsCarousel"
+                      data-bs-slide="next">
+                      <span
+                        class="carousel-control-next-icon"
+                        aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <!-- Google Reviews Section END-->
 
-        <!-- Google Reviews Section START-->
-<section class="page-section bg-light text-dark mt-5" id="reviews">
-  <div class="container">
-      <div class="text-center">
-          <h2 class="mb-4">What our patients say about us!</h2>
-      </div>
-      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/farizah.png" class="rounded-circle mb-3" alt="Reviewer 1" style="width: 80px; height: 80px;">
-                      <h5>Farizah Ismail <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on May, 2023)</span></h5>
-                      <p class="text-muted">"Highly recommended. Doctors and staff are good and very friendly. The clinic is clean, comfortable and beautiful. Affordable. The best and most satisfactory service regardless of age is served & the best service is satisfied. 👍🏻👍🏻👍🏻👍🏻👍🏻 don't regret choosing iris clinic. Thanks doctor & staff.."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/arif.png" class="rounded-circle mb-3" alt="Reviewer 2" style="width: 80px; height: 80px;">
-                      <h5>Mohd Arif <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on April, 2024)</span></h5>
-                      <p class="text-muted">"One of the best clinics in Shah Alam. The doctor is very friendly and very understanding of the patient's condition. Indeed, since the beginning, this clinic has been my family's choice. The service provided is very good and the price is very reasonable. Thank you Dr. Arisman and Dr. Alya   ."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/fathihah.png" class="rounded-circle mb-3" alt="Reviewer 3" style="width: 80px; height: 80px;">
-                      <h5>Nur Fathihah <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on April, 2024)</span></h5>
-                      <p class="text-muted">"Everything went well. Dr Alia gave a good and details explanation and staff also provided a good service. Will come again 👍🏼."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/ryan.png" class="rounded-circle mb-3" alt="Reviewer 4" style="width: 80px; height: 80px;">
-                      <h5>Ryan <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on January, 2024)</span></h5>
-                      <p class="text-muted">"I had a fantastic experience at Klinik Iris during my first visit for Influenza. Dr. Alya was thorough, explaining everything without pressure, and respecting my consent. The clinic is clean, aesthetically pleasing, and the friendly clinic assistant added to the positive atmosphere. Affordable pricing makes it a top recommendation for anyone seeking quality care. I wholeheartedly recommend Klinik Iris to everyone seeking a remarkable healthcare experience.."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/luqman.png" class="rounded-circle mb-3" alt="Reviewer 5" style="width: 80px; height: 80px;">
-                      <h5>LUQMANUL HAKIM <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on January, 2024)</span></h5>
-                      <p class="text-muted">"The receptionist is very welcoming and thanks to Dr Arisman for helping me with my problem. A great experience and well deserved 5 star!."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/atiqah.png" class="rounded-circle mb-3" alt="Reviewer 6" style="width: 80px; height: 80px;">
-                      <h5>Atiqah Wahab <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on May, 2023)</span></h5>
-                      <p class="text-muted">"Beautiful clinic. Dr Aris is one of the nicest and most knowledgeable doctors we have ever met. He gives very detailed explanations of the illnesses we have and the treatment we need. The receptionist and staff are also calming and professional. Price is very reasonable too."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-              <div class="carousel-item">
-                  <div class="d-flex flex-column align-items-center">
-                      <img src="./assets/shahrizan.png" class="rounded-circle mb-3" alt="Reviewer 7" style="width: 80px; height: 80px;">
-                      <h5>Shahrizan Adzham Ahmad <i class="fab fa-google text-danger ms-2"></i><span class="text-muted ms-2">(Posted on May, 2023)</span></h5>
-                      <p class="text-muted">"My experience at Klinik Iris was excellent. Everything was five star, from the receptionists to the doctor himself. After learning I had diabetes from my insurance's medical check-up, I at first felt worried. I therefore visited Klinik Iris for treatment and guidance. I appreciated how carefully Dr. Arisman reviewed the results of the diagnostic and thoroughly and openly explained everything. I am immediately aware of my situation and what needs to be done next. Thanks to his exceptional care, curiosity, investigative mind and ability to connect. He paired his knowledge with an openness to listen and discuss. Without a doubt, I'd recommend Klinik Iris."</p>
-                      <div class="stars mb-3">
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                          <i class="fas fa-star text-warning"></i>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-  </div>
-</section>
-<!-- Google Reviews Section END-->
+              <!--facebook START-->
+              <div id="fb-root"></div>
+              <script
+                async
+                defer
+                crossorigin="anonymous"
+                src="https://connect.facebook.net/sw_KE/sdk.js#xfbml=1&version=v20.0"
+                nonce="th8PRgw2"></script>
 
-          <!--facebook START-->
-          <div id="fb-root"></div>
-          <script async defer crossorigin="anonymous" src="https://connect.facebook.net/sw_KE/sdk.js#xfbml=1&version=v20.0" nonce="th8PRgw2"></script>
+              <center>
+                <div
+                  class="fb-page"
+                  data-href="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY"
+                  data-tabs="timeline"
+                  data-width="850"
+                  data-height="650"
+                  data-small-header="true"
+                  data-adapt-container-width="true"
+                  data-hide-cover="true"
+                  data-show-facepile="true">
+                  <blockquote
+                    cite="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY"
+                    class="fb-xfbml-parse-ignore">
+                    <a
+                      href="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY"
+                      >Klinik Iris</a
+                    >
+                  </blockquote>
+                </div>
+              </center>
 
-          <center><div class="fb-page" data-href="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY" data-tabs="timeline" data-width="850" data-height="650" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY">Klinik Iris</a></blockquote></div></center>
+              <!--facebook END-->
 
-          <!--facebook END-->
-
-        <br>
-        <br>
-       
+              <br />
+              <br />
             </div>
-        </div>
+          </div>
 
-        <div class="col-lg-12 has-box-shadow mb-4 pb-3 navy-background" style="background-color: #040430;"> 
+          <div
+            class="col-lg-12 has-box-shadow mb-4 pb-3 navy-background"
+            style="background-color: #040430">
             <div class="container px-4 px-lg-5 text-center pt-40">
-                <h1 class="mb-4 f-s-3-rem" style="color: gold;">For enquiries or to book an appointment contact us!</h1>
-                <h4 class="mb-4" style="color: gold;">03-5524 2590 / 01161629602</h4>
-                <a class="btn btn-secondary p-3" href="tel:03-5524 2590"<i class="bi-telephone px-1" style="color: #040430;"></i>Call us now</a>
+              <h1 class="mb-4 f-s-3-rem" style="color: gold">
+                For enquiries or to book an appointment contact us!
+              </h1>
+              <h4 class="mb-4" style="color: gold">
+                03-5524 2590 / 01161629602
+              </h4>
+              <a class="btn btn-secondary p-3" href="tel:03-5524 2590"
+                ><i class="bi-telephone px-1" style="color: #040430"></i>Call us
+                now</a
+              >
             </div>
-        </div>
-        
-        
-      
-        <!-- Portfolio Section END-->
-        
-        <!-- Contact Section START-->
-        <section class="page-section mt-4" id="contact">
-          <div class="container px-4 px-lg-5">
-              <div class="row g-0">
-                  <!-- Google Map Section START-->
-                  <div class="col-lg-6 col-sm-12 p-3 has-box-shadow">
-                      <div class="row justify-content-center">
-                          <div class="col-lg-12 text-center mt-4">
-                              <iframe class="iframe-map shadow-sm"
-                                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0682113659877!2d101.54905787452898!3d3.076460053596096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4de7e2dc9cdf%3A0x27241894413d3287!2sKlinik%20Iris!5e0!3m2!1sen!2smy!4v1710835603379!5m2!1sen!2smy"
-                                  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                          </div>
-                      </div>
-                  </div>
-                  <!-- Google Map Section END-->
-
-                  <!-- Contact Info Section START-->
-                  <div class="col-lg-6 col-sm-12 p-3 has-box-shadow">
-                      <div class="row justify-content-center">
-                          <div class="col-lg-12 text-center">
-                              <h2 class="mt-3"><i class="bi bi-telegram fs-2 text-muted"></i> Contact</h2>
-                              <hr class="divider" />
-                              <p class="text-muted mb-5">Ready to get in touch with us? Call us or send us a message, and we will get back to you as soon as possible!</p>
-                          </div>
-                      </div>
-                      
-                      <!-- Email Section START-->
-                      <div class="row justify-content-center">
-                          <div class="col-lg-12 text-center mb-4">
-                              <h4 class="mb-3"><i class="bi bi-envelope fs-2 text-dark"></i> EMAIL:</h4>
-                              <a href="mailto:klinik.iris.shahalam@gmail.com" class="text-decoration-none">
-                                  <div class="contact-info bg-navy px-3 py-2" style="text-transform: lowercase;">
-                                      klinik.iris.shahalam@gmail.com
-                                  </div>
-                              </a>
-                          </div>
-                      </div>
-                      <!-- Email Section END-->
-
-                      <!-- Phone Section START-->
-                      <div class="row justify-content-center">
-                          <div class="col-lg-12 text-center mb-4">
-                              <h4 class="mb-3"><i class="bi bi-telephone fs-2 text-dark"></i> PHONE:</h4>
-                              <div class="contact-info bg-navy px-3 py-2">
-                                  +603-5524 2590 / 01161629602
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Phone Section END-->
-
-                      <!-- Address Section START-->
-                      <div class="row justify-content-center">
-                          <div class="col-lg-12 text-center mb-4">
-                              <h4 class="mb-3"><i class="bi bi-geo-alt fs-2 text-dark"></i> DIRECTION:</h4>
-                              <div class="contact-info bg-navy px-3 py-2">
-                                  20, Jalan Boling Padang F 13/F,<br>
-                                  Seksyen 13, 40100 Shah Alam, Selangor.
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Address Section END-->
-                      
-                      <hr class="divider" />
-                  </div>
-                  <!-- Contact Info Section END-->
-              </div>
           </div>
-      </section>
-      <!-- Contact Section END-->
 
-        <!-- Footer Section START-->
-    <footer class="bg-navy has-box-shadow mt-2 py-5" style="background-color: rgb(10, 10, 56);">
-        <div class="container px-4 px-lg-5">
-            <div class="row g-0 justify-content-center text-center text-white">
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <h5 style="color: gold;">Contact Us</h5>
-                    <p>Email: <a href="mailto:klinik.iris.shahalam@gmail.com" class="text-decoration-none text-white">klinik.iris.shahalam@gmail.com</a></p>
-                    <p>Phone: +603-5524 2590</p>
-                    <p>Address: 20, Jalan Boling Padang F 13/F,<br>Seksyen 13, 40100 Shah Alam, Selangor.</p>
+          <!-- Portfolio Section END-->
+
+          <!-- Contact Section START-->
+          <section class="page-section mt-4" id="contact">
+            <div class="container px-4 px-lg-5">
+              <div class="row g-0">
+                <!-- Google Map Section START-->
+                <div class="col-lg-6 col-sm-12 p-3 has-box-shadow">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center mt-4">
+                      <iframe
+                        class="iframe-map shadow-sm"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0682113659877!2d101.54905787452898!3d3.076460053596096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4de7e2dc9cdf%3A0x27241894413d3287!2sKlinik%20Iris!5e0!3m2!1sen!2smy!4v1710835603379!5m2!1sen!2smy"
+                        width="100%"
+                        height="450"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <h5 style="color: gold;">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#services" class="text-decoration-none text-white">Services</a></li>
-                        <li><a href="#about" class="text-decoration-none text-white">About Us</a></li>
-                        <li><a href="#contact" class="text-decoration-none text-white">Contact</a></li>
-                    </ul>
+                <!-- Google Map Section END-->
+
+                <!-- Contact Info Section START-->
+                <div class="col-lg-6 col-sm-12 p-3 has-box-shadow">
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                      <h2 class="mt-3">
+                        <i class="bi bi-telegram fs-2 text-muted"></i> Contact
+                      </h2>
+                      <hr class="divider" />
+                      <p class="text-muted mb-5">
+                        Ready to get in touch with us? Call us or send us a
+                        message, and we will get back to you as soon as
+                        possible!
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Email Section START-->
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center mb-4">
+                      <h4 class="mb-3">
+                        <i class="bi bi-envelope fs-2 text-dark"></i> EMAIL:
+                      </h4>
+                      <a
+                        href="mailto:klinik.iris.shahalam@gmail.com"
+                        class="text-decoration-none">
+                        <div
+                          class="contact-info bg-navy px-3 py-2"
+                          style="text-transform: lowercase">
+                          klinik.iris.shahalam@gmail.com
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Email Section END-->
+
+                  <!-- Phone Section START-->
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center mb-4">
+                      <h4 class="mb-3">
+                        <i class="bi bi-telephone fs-2 text-dark"></i> PHONE:
+                      </h4>
+                      <div class="contact-info bg-navy px-3 py-2">
+                        +603-5524 2590 / 01161629602
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Phone Section END-->
+
+                  <!-- Address Section START-->
+                  <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center mb-4">
+                      <h4 class="mb-3">
+                        <i class="bi bi-geo-alt fs-2 text-dark"></i> DIRECTION:
+                      </h4>
+                      <div class="contact-info bg-navy px-3 py-2">
+                        20, Jalan Boling Padang F 13/F,<br />
+                        Seksyen 13, 40100 Shah Alam, Selangor.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Address Section END-->
+
+                  <hr class="divider" />
                 </div>
-                <div class="col-lg-3 col-md-6 mb-3">
-                    <h5 style="color: gold;">Follow Us</h5>
-                    <a href="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY" class="text-decoration-none text-white me-2">
-                        <i class="bi bi-facebook fs-4"></i>
-                    </a>
-                    <a href="https://www.instagram.com/klinik.iris/" class="text-decoration-none text-white me-2">
-                        <i class="bi bi-instagram fs-4"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@klinik_iris" class="text-decoration-none text-white me-2">
-                        <i class="fab fa-tiktok fs-4"></i>
-                    </a>
-                </div>
+                <!-- Contact Info Section END-->
+              </div>
             </div>
-            <div class="row g-0 justify-content-center">
+          </section>
+          <!-- Contact Section END-->
+
+          <!-- Footer Section START-->
+          <footer
+            class="bg-navy has-box-shadow mt-2 py-5"
+            style="background-color: rgb(10, 10, 56)">
+            <div class="container px-4 px-lg-5">
+              <div
+                class="row g-0 justify-content-center text-center text-white">
+                <div class="col-lg-3 col-md-6 mb-3">
+                  <h5 style="color: gold">Contact Us</h5>
+                  <p>
+                    Email:
+                    <a
+                      href="mailto:klinik.iris.shahalam@gmail.com"
+                      class="text-decoration-none text-white"
+                      >klinik.iris.shahalam@gmail.com</a
+                    >
+                  </p>
+                  <p>Phone: +603-5524 2590</p>
+                  <p>
+                    Address: 20, Jalan Boling Padang F 13/F,<br />Seksyen 13,
+                    40100 Shah Alam, Selangor.
+                  </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                  <h5 style="color: gold">Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        href="#services"
+                        class="text-decoration-none text-white"
+                        >Services</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#about" class="text-decoration-none text-white"
+                        >About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#contact" class="text-decoration-none text-white"
+                        >Contact</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                  <h5 style="color: gold">Follow Us</h5>
+                  <a
+                    href="https://www.facebook.com/Klinik24jamShahAlam/?locale=ms_MY"
+                    class="text-decoration-none text-white me-2">
+                    <i class="bi bi-facebook fs-4"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/klinik.iris/"
+                    class="text-decoration-none text-white me-2">
+                    <i class="bi bi-instagram fs-4"></i>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@klinik_iris"
+                    class="text-decoration-none text-white me-2">
+                    <i class="fab fa-tiktok fs-4"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="row g-0 justify-content-center">
                 <div class="col-12 text-center mt-3">
-                    <div class="small text-white">&copy; 2021 - Klinik Iris | Klinik Keluarga Anda</div>
+                  <div class="small text-white">
+                    &copy; 2021 - Klinik Iris | Klinik Keluarga Anda
+                  </div>
                 </div>
-            </div>
-            <div class="row g-0 justify-content-center mt-3">
+              </div>
+              <div class="row g-0 justify-content-center mt-3">
                 <div class="col-12 text-center">
-                    <a href="#" class="text-decoration-none text-white">
-                        <i class="bi bi-arrow-up-circle fs-2"></i>
-                        <div>Back to Top</div>
-                    </a>
+                  <a href="#" class="text-decoration-none text-white">
+                    <i class="bi bi-arrow-up-circle fs-2"></i>
+                    <div>Back to Top</div>
+                  </a>
                 </div>
+              </div>
             </div>
+          </footer>
+          <!-- Footer Section END-->
+
+          <!-- Bootstrap core JS-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+          <!-- SimpleLightbox plugin JS-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+          <script>
+            // JavaScript for scroll reveal animation
+            window.addEventListener("scroll", function () {
+              var visionMissionSection =
+                document.getElementById("vision-mission");
+              var position = visionMissionSection.getBoundingClientRect();
+
+              // If the section is in the viewport
+              if (position.top < window.innerHeight) {
+                visionMissionSection.classList.add("visible");
+              }
+            });
+          </script>
+          <!-- Core theme JS-->
+          <!-- <script src="js/scripts.js"></script> -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- MDB -->
+          <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script> -->
+          <!-- Include Bootstrap and Font Awesome scripts -->
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
         </div>
-    </footer>
-    <!-- Footer Section END-->
-
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- SimpleLightbox plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-    <script>
-        // JavaScript for scroll reveal animation
-        window.addEventListener('scroll', function() {
-            var visionMissionSection = document.getElementById('vision-mission');
-            var position = visionMissionSection.getBoundingClientRect();
-    
-            // If the section is in the viewport
-            if (position.top < window.innerHeight) {
-                visionMissionSection.classList.add('visible');
-            }
-        });
-    </script>
-    <!-- Core theme JS-->
-    <!-- <script src="js/scripts.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- MDB -->
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script> -->
-    <!-- Include Bootstrap and Font Awesome scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
