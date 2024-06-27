@@ -45,9 +45,6 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet" />
 
     <style>
       .nav-link {
@@ -216,7 +213,19 @@
         opacity: 1; /* Fade in the section */
         transform: translateY(0); /* Reset translation */
       }
+
+      /* new function */
+
+      .faded {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .visibled {
+        opacity: 1;
+      }
     </style>
+
+    <!-- new initialize bootstrap -->
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -252,10 +261,10 @@
               <a class="nav-link" href="#services">PACKAGES</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/panels.html">PANELS</a>
+              <a class="nav-link" href="./pages/panels.html">PANELS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/gallery.html">GALLERY</a>
+              <a class="nav-link" href="./pages/gallery.html">GALLERY</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">CONTACT</a>
@@ -286,13 +295,30 @@
         </div>
       </div>
     </nav>
+    <div style="height: 110px"></div>
 
     <header class="masthead">
-      <div id="carouselExampleIndicators" class="banner-container"></div>
-      <div class="banner-text">
-        Selamat Datang ke Klinik Iris<br />Klinik Keluarga Anda
+      <div
+        id="carouselExampleIndicators"
+        class="banner-container"
+        style="
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "></div>
+      <div
+        class="banner-text"
+        style="
+          position: absolute;
+          font-size: clamp(1.5rem, 6vw, 3rem);
+          color: white;
+        ">
+        Welcom to Klinik Iris<br />Klinik Keluarga Anda
         <div class="working-hours">
-          Monday - Friday, Sunday: 9am to 11pm<br />Sunday: 9am to 7pm
+          Weekdays 9am-11pm<br />
+          sabtu 10am-7pm<br />
+          Ahad 10am-11pm
         </div>
       </div>
     </header>
@@ -395,57 +421,59 @@
               demonstrated exceptional skill and proficiency in their practice.
             </p>
 
-            <div class="text-center">
-              <button
-                class="btn btn-gold mb-3"
-                data-bs-toggle="collapse"
-                data-bs-target="#doctorArisman"
-                aria-expanded="false"
-                aria-controls="doctorArisman">
-                Dr. Arisman
-              </button>
-              <div class="collapse" id="doctorArisman">
-                <ul class="list-unstyled" style="color: rgb(10, 10, 56)">
-                  <li>
-                    <strong>Alma Mater:</strong> Universitas Hassanuddin,
-                    Indonesia
-                  </li>
-                  <li>
-                    <strong>Previous Hospital:</strong> Tengku Ampuan Rahimah
-                    Hospital <br />
-                    Queen Elizabeth Hospital, Kota Kinabalu
-                  </li>
-                  <li><strong>Clinic Hours:</strong></li>
-                  <li>Monday (9am - 11pm)</li>
-                  <li>Wednesday (9am - 11pm)</li>
-                  <li>Friday (9am-1pm, 2pm-11pm)</li>
-                  <li>Saturday (9am - 7pm)</li>
-                </ul>
-              </div>
+            <script></script>
 
-              <button
-                class="btn btn-gold mb-3"
-                data-bs-toggle="collapse"
-                data-bs-target="#doctorAlya"
-                aria-expanded="false"
-                aria-controls="doctorAlya">
-                Dr. Alya
-              </button>
-              <div class="collapse" id="doctorAlya">
-                <ul class="list-unstyled" style="color: rgb(10, 10, 56)">
-                  <li>
-                    <strong>Alma Mater:</strong> Universitas Hassanuddin,
-                    Indonesia
-                  </li>
-                  <li>
-                    <strong>Previous Hospital:</strong> Kuala Lumpur General
-                    Hospital<br />Hospital Shah Alam
-                  </li>
-                  <li><strong>Clinic Hours:</strong></li>
-                  <li>Tuesday (9am - 11pm)</li>
-                  <li>Thursday (9am - 11pm)</li>
-                  <li>Sunday (9am - 11pm)</li>
-                </ul>
+            <div class="text-center">
+              <div class="flex gap-5">
+                <button class="btn btn-gold mb-3" id="arisman1">
+                  Dr. Arisman
+                </button>
+                <button class="btn btn-gold mb-3" id="alya1">Dr. Alya</button>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                ">
+                <div class="faded" id="arisman2">
+                  <h3>Dr. Arisman</h3>
+                  <ul class="list-unstyled" style="color: rgb(10, 10, 56)">
+                    <li>
+                      <strong>Alma Mater:</strong> Universitas Hassanuddin,
+                      Indonesia
+                    </li>
+                    <li>
+                      <strong>Previous Hospital:</strong> Tengku Ampuan Rahimah
+                      Hospital <br />
+                      Queen Elizabeth Hospital, Kota Kinabalu
+                    </li>
+                    <li><strong>Clinic Hours:</strong></li>
+                    <li>Isnin (9am - 11pm)</li>
+                    <li>Selasa (4pm-11pm)</li>
+                    <li>Rabu (9am-11pm)</li>
+                    <li>Jumaat (9am - 11pm)</li>
+                    <li>Sabtu (10am-7pm)</li>
+                  </ul>
+                </div>
+
+                <div class="faded" style="position: absolute" id="alya2">
+                  <h3>Dr. Alya</h3>
+                  <ul class="list-unstyled" style="color: rgb(10, 10, 56)">
+                    <li>
+                      <strong>Alma Mater:</strong> Universitas Hassanuddin,
+                      Indonesia
+                    </li>
+                    <li>
+                      <strong>Previous Hospital:</strong> Kuala Lumpur General
+                      Hospital<br />Hospital Shah Alam
+                    </li>
+                    <li><strong>Clinic Hours:</strong></li>
+                    <li>Selasa (9am - 11pm)</li>
+                    <li>Khamis (9am - 11pm)</li>
+                    <li>Ahad (10am - 11pm)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -571,8 +599,11 @@
                 <div class="col-lg-4 col-sm-12 p-2">
                   <div
                     class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-
-                    <img src="./assets/s1.JPG" class="w-100" style="min-height: 400px" alt="Package S1" />
+                    <img
+                      src="./assets/s1.JPG"
+                      class="w-100"
+                      style="min-height: 400px"
+                      alt="Package S1" />
 
                     <a href="./pages/page1.html">
                       <div
@@ -1117,11 +1148,35 @@
           </footer>
           <!-- Footer Section END-->
 
-          <!-- Bootstrap core JS-->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- New function -->
+          <script>
+            document
+              .getElementById("arisman1")
+              .addEventListener("click", function () {
+                var arisman2 = document.getElementById("arisman2");
+                var alya2 = document.getElementById("alya2");
+                if (arisman2.classList.contains("visibled")) {
+                  arisman2.classList.remove("visibled");
+                } else {
+                  arisman2.classList.add("visibled");
+                  alya2.classList.remove("visibled");
+                }
+              });
 
-          <!-- SimpleLightbox plugin JS-->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+            document
+              .getElementById("alya1")
+              .addEventListener("click", function () {
+                var arisman2 = document.getElementById("arisman2");
+                var alya2 = document.getElementById("alya2");
+                if (alya2.classList.contains("visibled")) {
+                  alya2.classList.remove("visibled");
+                } else {
+                  alya2.classList.add("visibled");
+                  arisman2.classList.remove("visibled");
+                }
+              });
+          </script>
+
           <script>
             // JavaScript for scroll reveal animation
             window.addEventListener("scroll", function () {
@@ -1135,15 +1190,10 @@
               }
             });
           </script>
-          <!-- Core theme JS-->
-          <!-- <script src="js/scripts.js"></script> -->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          <!-- MDB -->
-          <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script> -->
-          <!-- Include Bootstrap and Font Awesome scripts -->
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+          <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
         </div>
       </div>
     </div>
